@@ -102,7 +102,7 @@
 		EBE755E6293E37DE00806B32 /* DiffusionUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffusionUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EBE75601293E91E200806B32 /* Pipeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pipeline.swift; sourceTree = "<group>"; };
 		EBE756082941178600806B32 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
-		F15520212971093300DC009B /* Diffusers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diffusers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F15520212971093300DC009B /* My-SDXL-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My-SDXL-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15520232971093300DC009B /* Diffusion_macOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diffusion_macOSApp.swift; sourceTree = "<group>"; };
 		F15520252971093300DC009B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F155202A2971093400DC009B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 				EBE755C5293E37DD00806B32 /* Diffusion.app */,
 				EBE755D6293E37DE00806B32 /* DiffusionTests.xctest */,
 				EBE755E0293E37DE00806B32 /* DiffusionUITests.xctest */,
-				F15520212971093300DC009B /* Diffusers.app */,
+				F15520212971093300DC009B /* My-SDXL-App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -381,7 +381,7 @@
 				EB25B3D72A3A2DD5000E25A1 /* StableDiffusion */,
 			);
 			productName = "Diffusion-macOS";
-			productReference = F15520212971093300DC009B /* Diffusers.app */;
+			productReference = F15520212971093300DC009B /* My-SDXL-App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -392,7 +392,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1410;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					EBE755C4293E37DD00806B32 = {
 						CreatedOnToolsVersion = 14.1;
@@ -611,9 +611,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -669,9 +671,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -696,11 +700,15 @@
 				CODE_SIGN_ENTITLEMENTS = Diffusion/Diffusion.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Diffusion/Preview Content\"";
+				DEVELOPMENT_TEAM = 7VFV5S53PP;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Diffusion/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Diffusers-My-Fork";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To be able to save generated images to your Photo Library, you’ll need to allow this.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -715,6 +723,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.huggingface.Diffusers-Fork-LU";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -735,11 +744,15 @@
 				CODE_SIGN_ENTITLEMENTS = Diffusion/Diffusion.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Diffusion/Preview Content\"";
+				DEVELOPMENT_TEAM = 7VFV5S53PP;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Diffusion/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Diffusers-My-Fork";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "To be able to save generated images to your Photo Library, you’ll need to allow this.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -754,6 +767,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.huggingface.Diffusers-Fork-LU";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -772,6 +786,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = ZWDJQ796RU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
@@ -795,6 +810,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = ZWDJQ796RU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
@@ -817,6 +833,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = ZWDJQ796RU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
@@ -839,6 +856,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = ZWDJQ796RU;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
@@ -865,6 +883,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Diffusion-macOS/Diffusion_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Diffusion-macOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 2EADP68M95;
 				ENABLE_PREVIEWS = YES;
@@ -877,6 +896,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				PRODUCT_NAME = "My-SDXL-App";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -893,6 +913,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Diffusion-macOS/Diffusion_macOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Diffusion-macOS/Preview Content\"";
 				DEVELOPMENT_TEAM = 2EADP68M95;
 				ENABLE_PREVIEWS = YES;
@@ -906,6 +927,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.huggingface.Diffusers;
+				PRODUCT_NAME = "My-SDXL-App";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
